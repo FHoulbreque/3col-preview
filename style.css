@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --p-orange: hsl(31, 77%, 52%);
+    --p-dkcyan: hsl(184, 100%, 22%);
+    --p-vdk-cyan: hsl(179, 100%, 13%);
+    --n-pwhite: hsla(0, 0%, 100%, 0.75);
+    --n-bwhite: hsl(0, 0%, 95%);
+}
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* IE compatibility */
+    overflow: hidden;
+}
+
+p,
+h2 {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--n-bwhite);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--n-pwhite);
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: var(--n-bwhite);
+}
+
+main {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: calc(100vh - 20px);
+    min-height: 40em;
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.col {
+    padding: 3em;
+    min-height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col :is(img,
+h2) {
+    margin-bottom: 2rem;
+}
+
+.col p {
+    padding: 0;
+    line-height: 2em;
+}
+
+.col a {
+    display: block;
+    width: max-content;
+    padding: 1em 2.54em;
+    background: var(--n-bwhite);
+    text-decoration: none;
+    border-radius: 2em;
+    outline: transparent solid 2px;
+    transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+
+.col a:hover {
+    color: var(--n-bwhite);
+    background: #fff0;
+    box-shadow: 0 0 0 3px inset;
+    border-radius: 2em;
+}
+
+.col a:focus {
+    text-decoration: underline;
+}
+
+.col1 {
+    background-color: var(--p-orange);
+}
+
+.col1 a {
+    color: var(--p-orange);
+}
+
+.col2 {
+    background-color: var(--p-dkcyan)
+}
+
+.col2 a {
+    color: var(--p-dkcyan);
+}
+
+.col3 {
+    background-color: var(--p-vdk-cyan);
+}
+
+.col3 a {
+    color: var(--p-vdk-cyan);
+}
+
+.attribution {
+    display: grid;
+    align-content: center;
+    font-size: 11px;
+    text-align: center;
+    background: var(--n-pwhite);
+    color: hsl(228, 45%, 20%);
+    height: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        height: max-content;
+        margin: 2em 0;
+    }
+    .wrapper {
+        grid-template-columns: unset;
+        grid-template-rows: repeat(3, fr);
+        width: 300px;
+    }
+}
