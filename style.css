@@ -34,7 +34,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: var(--n-bwhite);
-    font-size: 15px;
+    font-size: 1rem;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
     color: var(--n-pwhite);
@@ -43,7 +43,7 @@ body {
 h2 {
     font-family: 'Big Shoulders Display', cursive;
     font-weight: 700;
-    font-size: 3em;
+    font-size: 3rem;
     text-transform: uppercase;
     color: var(--n-bwhite);
 }
@@ -61,7 +61,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 900px;
-    border-radius: 1em;
+    border-radius: 0.5em;
     overflow: hidden;
 }
 
@@ -88,6 +88,8 @@ h2) {
     width: max-content;
     padding: 1em 2.54em;
     background: var(--n-bwhite);
+    color: black;
+    mix-blend-mode: screen;
     text-decoration: none;
     border-radius: 2em;
     outline: transparent solid 2px;
@@ -109,24 +111,12 @@ h2) {
     background-color: var(--p-orange);
 }
 
-.col1 a {
-    color: var(--p-orange);
-}
-
 .col2 {
     background-color: var(--p-dkcyan)
 }
 
-.col2 a {
-    color: var(--p-dkcyan);
-}
-
 .col3 {
     background-color: var(--p-vdk-cyan);
-}
-
-.col3 a {
-    color: var(--p-vdk-cyan);
 }
 
 footer {
@@ -150,7 +140,7 @@ footer a {
     }
     .wrapper {
         grid-template-columns: unset;
-        grid-template-rows: repeat(3, fr);
-        width: 300px;
+        grid-template-rows: repeat(3, 1fr);
+        max-width: 300px;
     }
 }
